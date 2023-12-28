@@ -1,5 +1,5 @@
 import React from 'react'
-import { AddToCart } from './AddToCart';
+import AddToCart from './AddToCart';
 
 export const ProductCard = () => {
   return (
@@ -8,3 +8,5 @@ export const ProductCard = () => {
     </div>
   )
 }
+
+export default ProductCard

@@ -11,29 +11,44 @@ const schema = z.object({
 export async function POST(request: NextRequest) {
   const body = await request.json();
 
+  // Validate the input using the updated schema
   const validation = schema.safeParse(body);
-  if (!validation.success)
+  if (!validation.success) {
     return NextResponse.json(validation.error.errors, {
       status: 400,
     });
+  }
 
+  // Check if the user already exists
   const user = await prisma.user.findUnique({
     where: { email: body.email },
   });
 
-  if (user)
+  if (user) {
     return NextResponse.json(
       { error: "User already exists" },
       { status: 400 }
     );
+  }
 
+  // Hash the password
   const hashedPassword = await bcrypt.hash(body.password, 10);
+
+  // Extract the name from the email
+  const nameFromEmail = body.email.split('@')[0];
+
+  // Create a new user with the name extracted from email, email, and hashed password
   const newUser = await prisma.user.create({ 
     data: {
+      name: nameFromEmail, // Use the extracted name
       email: body.email,
-      hashedPassword
+      hashedPassword, // Ensure this field matches your Prisma schema
     }
   });
 
-  return NextResponse.json({ email: newUser.email });
+  // Return the new user's email and name
+  return NextResponse.json({ 
+    name: newUser.name,
+    email: newUser.email 
+  });
 }

@@ -1,37 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Fullstack Next.js
+Repositori ini berisi semua contoh kode dan solusi latihan.
 
-## Getting Started
+Anda akan belajar bagaimana cara:
 
-First, run the development server:
+- Memahami dasar-dasar Next.js dan React
+- Mengelola state dalam komponen React
+- Membuat API Route
+- Mengintegrasikan dengan Prisma dan MySQL
+- Menggunakan NextAuth untuk autentikasi
+- Menyimpan data dengan JWT
+- Menggunakan Tailwind CSS dan daisyui untuk styling
+- Menangani file upload dengan Cloudinary
+- Mengatur analisis dengan Google Analytics
+- Menggunakan middleware NextAuth
+- Mengelola rute navigasi dengan Next.js
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Teknologi dan Kerangka Kerja
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js
+- TypeScript
+- NextAuth
+- Prisma
+- JWT
+- Tailwind CSS
+- daisyui
+- MySQL
+- lodash
+- bcrypt
+- zod
+- Cloudinary
+- React
+- Google Analytics
+- next-auth/middleware
+- next-auth/react
+- next-auth/jwt
+- next/server
+- next/navigation
+- next/script
+- @prisma/client
+- next/image
+- autoprefixer
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Instalasi
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Ikuti langkah-langkah ini untuk menginstal dan menyiapkan proyek:
 
-## Learn More
+1. **Kloning repositori**
 
-To learn more about Next.js, take a look at the following resources:
+   Buka terminal Anda dan jalankan perintah berikut untuk mengkloning repositori:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   https://github.com/z0zero/my-app.git
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. **Navigasi ke direktori proyek**
 
-## Deploy on Vercel
+   ```bash
+   cd next-course
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Instal Node.js dan npm**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# my-app
+   Unduh dan instal Node.js dan npm dari [sini](https://nodejs.org/en/download/).
+
+4. **Instal dependensi yang diperlukan**
+
+   Jalankan perintah berikut untuk menginstal semua dependensi yang diperlukan:
+
+   ```bash
+   npm i
+   ```
+5. **Jalankan proyek**
+
+    ```bash
+    npm run dev
+    ```
+
+    Buka [http://localhost:3000](http://localhost:3000) dengan browser Anda untuk melihat hasilnya.

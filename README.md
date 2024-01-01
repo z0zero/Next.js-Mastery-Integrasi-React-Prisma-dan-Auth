@@ -56,7 +56,7 @@ Ikuti langkah-langkah ini untuk menginstal dan menyiapkan proyek:
 2. **Navigasi ke direktori proyek**
 
    ```bash
-   cd next-course
+   cd my-app
    ```
 
 3. **Instal Node.js dan npm**

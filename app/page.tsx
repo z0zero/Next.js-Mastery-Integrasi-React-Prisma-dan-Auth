@@ -1,20 +1,25 @@
-import Image from 'next/image'
-import coffe from '@/public/images/coffee.jpg'
-import { Metadata } from 'next'
+"use client";
 
-export default async function Home() {
+export default function Home() {
   return (
-    <main className='relative h-screen'>
+    <main>
       <h1>Hello World</h1>
+      <button
+        onClick={async () => {
+          const _ = (await import("lodash")).default;
+
+          const users = [
+            { name: "c" },
+            { name: "b" },
+            { name: "a" },
+          ];
+
+          const sorted = _.orderBy(users, ["name"]);
+          console.log(sorted);
+        }}
+      >
+        Show
+      </button>
     </main>
-  )
-}
-
-export async function generateMetadata(): Promise<Metadata> {
-  const product = await fetch('');
-
-  return {
-    title: 'product.title',
-    description: '....'
-  }
+  );
 }
